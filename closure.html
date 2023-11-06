@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Counter</title>
+<style>
+    button {
+        background-color: pink; 
+        border: none; 
+        color: white; 
+        padding: 10px 20px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px; 
+    }
+</style>
+<script>
+(function() {
+    var count = 0; 
+
+    window.updateClickCount = function() {
+        count += 1; 
+        document.getElementById('counter').textContent = count; 
+    };
+})();
+</script>
+</head>
+<body>
+
+<button onclick="updateClickCount()">click me</button>
+<p>Button was clicked <span id="counter">0</span> times.</p>
+
+</body>
+</html>
