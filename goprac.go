@@ -11,7 +11,7 @@ func main() {
 		return
 	}
 
-	// Parse the command line argument to an integer
+	
 	maxNum, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Printf("Error: '%s' is not a valid integer.\n", os.Args[1])
